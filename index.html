@@ -10,8 +10,17 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <script src="app.js"> </script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+    integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+    crossorigin="anonymous"
+  />
+    
 
     
 
@@ -68,6 +77,19 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      .todo-list{
+        list-style: none;
+      }
+      .todo{
+        display: flex;
+        justify-content: space-between;
+      }
+      .complete-btn{
+        border: none;
+      }
+      .completed{
+        text-decoration: line-through;
+      }
     </style>
 
     
@@ -80,29 +102,18 @@
   <h2 class=" mb-3 fw-normal">Bonjour </h2>
     <h4 class=" mb-3 fw-normal">Bienvenue dans Todo App </h4>
     
-  <form method="post">
-    <span >Ajouter une tâche</span>
-    <div class="d-flex">
-     
-    <input  class="form-control todo-titre me-3 my-3" placeholder="titre*" required>
-    <input  class="form-control me-3 my-3" placeholder="description">
-    <button class="btn todo-boutton h-25 btn-success mt-3" type="submit">+</button>
-   </div>
-    </form>
-
-
     <form>
-
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
    
-
-    <div class="todo-list mb-3">
-      
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
     </div>
-    <div class="todo-checked mb-3">
-      
-    </div>
-
-  </form>
+    <script src="./app.js"></script>
+ 
 </main>
 
 
